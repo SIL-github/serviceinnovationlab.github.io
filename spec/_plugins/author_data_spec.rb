@@ -25,12 +25,12 @@ RSpec.describe SiteData::AuthorData do
 
     it 'fetches a key' do
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'fetches a key that is not there' do
       author_name = @author_data.fetch('author', 'bogus_key')
-      expect(author_name).not_to eq 'aaron'
+      expect(author_name).not_to eq 'jacob-ong'
     end
 
     it 'it cannot fetch a file that does not exist' do
@@ -50,52 +50,52 @@ RSpec.describe SiteData::AuthorData do
 
     it 'can update a file without referencing a file extension' do
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author', 'name', 'brian')
+      @author_data.update('author', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'brian'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author', 'name', 'aaron')
+      @author_data.update('author', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'can update a file by referencing a file extension' do
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author.md', 'name', 'brian')
+      @author_data.update('author.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'brian'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author.md', 'name', 'aaron')
+      @author_data.update('author.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'does not update a file if it does not need updating' do
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author.md', 'name', 'aaron')
+      @author_data.update('author.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'can update and leave the content intact' do
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
 
       file_path = @author_data.create_file_path('author')
       num_lines = File.readlines(file_path).count
-      @author_data.update('author.md', 'name', 'brian')
+      @author_data.update('author.md', 'name', 'jacob-ong')
       num_lines_updated = File.readlines(file_path).count
       expect(num_lines_updated).to eq num_lines
 
-      @author_data.update('author.md', 'name', 'aaron')
+      @author_data.update('author.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author', 'name')
-      expect(author_name).to eq 'aaron'
+      expect(author_name).to eq 'jacob-ong'
     end
   end
 
@@ -112,62 +112,62 @@ RSpec.describe SiteData::AuthorData do
 
     it 'fetches a key' do
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'fetches a key that is not there' do
       author_name = @author_data.fetch('author_with_content', 'bogus_key')
-      expect(author_name).not_to eq 'burt'
+      expect(author_name).not_to eq 'jacob-ong'
     end
 
     it 'can update a file without referencing a file extension' do
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author_with_content', 'name', 'brian')
+      @author_data.update('author_with_content', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'brian'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author_with_content', 'name', 'burt')
+      @author_data.update('author_with_content', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'can update a file by referencing a file extension' do
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author_with_content.md', 'name', 'brian')
+      @author_data.update('author_with_content.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'brian'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author_with_content.md', 'name', 'burt')
+      @author_data.update('author_with_content.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'can update and leave the content intact' do
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
 
       file_path = @author_data.create_file_path('author_with_content')
       num_lines = File.readlines(file_path).count
-      @author_data.update('author_with_content.md', 'name', 'brian')
+      @author_data.update('author_with_content.md', 'name', 'jacob-ong')
       num_lines_updated = File.readlines(file_path).count
       expect(num_lines_updated).to eq num_lines
 
-      @author_data.update('author_with_content.md', 'name', 'burt')
+      @author_data.update('author_with_content.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
     end
 
     it 'does not update a file if it does not need updating' do
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
 
-      @author_data.update('author_with_content.md', 'name', 'burt')
+      @author_data.update('author_with_content.md', 'name', 'jacob-ong')
       author_name = @author_data.fetch('author_with_content', 'name')
-      expect(author_name).to eq 'burt'
+      expect(author_name).to eq 'jacob-ong'
     end
   end
 
@@ -189,19 +189,19 @@ RSpec.describe SiteData::AuthorData do
       expect(@all_authors.size).to eq all_authors_size
     end
 
-    it "aaron.md is in 'all_authors'" do
-      aaron_included = @all_authors.include? 'aaron.md'
-      expect(aaron_included).to be true
+    it "jacob-ong.md is in 'all_authors'" do
+      jacob_included = @all_authors.include? 'jacob-ong.md'
+      expect(jacob_included).to be true
     end
 
-    it "aaron.md is in 'published_authors'" do
-      aaron_included = @published_authors.include? 'aaron.md'
-      expect(aaron_included).to be true
+    it "jacob-ong.md is in 'published_authors'" do
+      jacob_included = @published_authors.include? 'jacob-ong.md'
+      expect(jacob_included).to be true
     end
 
-    it "aaron.md is not in 'unpublished_authors'" do
-      aaron_included = @unpublished_authors.include? 'aaron.md'
-      expect(aaron_included).to be false
+    it "jacob-ong.md is not in 'unpublished_authors'" do
+      jacob_included = @unpublished_authors.include? 'jacob-ong.md'
+      expect(jacob_included).to be false
     end
 
     it "unpublished_author.md is in 'all_authors'" do
