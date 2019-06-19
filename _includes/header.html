@@ -1,27 +1,49 @@
-<header class="site-header">
+<head>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    #main-content {
+      background-image: url("/assets/img/homepagebg_blue.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
 
-  <div class="wrapper">
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    #govt_logo {
+      height: 55px;
+      width: 200px;
+    }
 
-  <nav class="site-nav">
-    <a href="#" class="menu-icon">
-      <svg viewBox="0 0 18 15">
-        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-      </svg>
-    </a>
-
-    <div class="trigger">
-    <!--  Note: my_page is a variable -->
-    {% for my_page in site.pages %}
-    {% if my_page.title %}
-      <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-    {% endif %}
-    {% endfor %}
-    </div>
-    </nav>
- 
-  </div>
-
-</header>
+  </style> <!-- site.url: https://serviceinnovationlab.github.io/ -->
+  <!-- site.baseurl:  -->
+  <!-- siteurl: https://serviceinnovationlab.github.io/ -->
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="vmVo2wbQpKGMHVpllQP7bQ0w5gICWD356VH9DNbv5f4" />
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta tags
+================================================== -->
+  <meta name="twitter:card" content="summary_large_image"> <!-- Creator -->
+  <meta name="twitter:creator" content="@SIL">
+  <title>Service Innovation Lab | Home</title>
+  <meta property="og:title" content="Service Innovation Lab | Home" />
+  <meta name="twitter:title" content="Service Innovation Lab | Home">
+  <meta name="twitter:site" content="@SIL" /> <!-- Description -->
+  <meta name="description" content="The Service Innovation Lab is a cross agency collaborative.">
+  <meta property="og:description" content="The Service Innovation Lab is a cross agency collaborative." />
+  <meta property="twitter:description" content="The Service Innovation Lab is a cross agency collaborative." />
+  <link rel="canonical" href="https://serviceinnovationlab.github.io//" />
+  <!--[if lt IE 9]>
+  <script src="/assets/js/vendor/html5shiv.js"></script>
+  <script src="/assets/js/vendor/respond.js"></script>
+  <script src="/assets/js/vendor/selectivizr-min.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="/assets/css/main.css" media="all" />
+  <link rel="stylesheet" href="/assets/css/print.css" media="print" />
+</head>
