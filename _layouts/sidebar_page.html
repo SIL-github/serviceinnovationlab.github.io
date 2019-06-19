@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include header.html %}
+  <body class="page-about">
+    <a class="skipnav" href="#main-content">Skip to main content</a>
+    {% include header_nav.html %}
+    <div class="overlay"></div>
+      <div class="main-content" id="main-content">
+        <section class="usa-grid usa-section content-focus content-wide">
+          {% include side_bar.html %}
+          <section class="usa-width-two-thirds">
+            {{ page.content }}
+          </section>
+        </section>
+      </div>
+    {% include footer.html %}
+    {% include javascripts.html %}
+  </body>
+</html>

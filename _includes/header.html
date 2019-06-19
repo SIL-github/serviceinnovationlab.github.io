@@ -1,22 +1,9 @@
 <head>
   <link rel="stylesheet" href="/assets/css/main.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    #main-content {
-      background-image: url("/assets/img/homepagebg_blue.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    #govt_logo {
-      height: 55px;
-      width: 200px;
-    }
-
-  </style> <!-- site.url: https://serviceinnovationlab.github.io/ -->
-  <!-- site.baseurl:  -->
-  <!-- siteurl: https://serviceinnovationlab.github.io/ -->
+  {% if page.title == 'Home' %}
+    {% include home_bg.html %}
+  {% endif %}
   <!-- Basic Page Needs
 ================================================== -->
   <meta charset="utf-8">
